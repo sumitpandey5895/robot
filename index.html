@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+  <title> PROJECT FOUR </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<style>
+    @keyframes move{
+
+      25%{
+        position: relative;
+        left: 250px;
+      }
+      50%{
+        position: relative;
+        left:500px;
+      }
+      75%{
+        position: relative;
+        left: 800px;
+      }
+    }
+
+    @keyframes fire{
+      100%{
+        position: relative;
+        left:915px;
+      }
+    }
+    @keyframes blink{
+      100%{
+
+      }
+    }
+    body{
+      background:linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+                linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+      background-color:#708090;
+      background-size: 64px 128px
+       }
+    .track{
+      background:radial-gradient(black 15%, transparent 16%) 0 0,
+                radial-gradient(black 15%, transparent 16%) 8px 8px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+      background-color:#282828;
+      background-size:16px 16px;
+      width: 855px;
+      height:30px;
+      border-radius: 20px;
+      position: relative;
+      left:240px;
+      top:-170px;
+      z-index: -1;
+    }
+    .commando{
+    position:relative;
+    left:50px;
+   }
+   .terrorist{
+    position: relative;
+    left:800px;
+    top:-350px;
+
+   }
+    .top img{
+    animation: move 5s infinite;
+    position:relative;
+    left:500px;
+   }
+  .team1 img{
+    position: relative;
+    left: 120px;
+    top: -160px;
+    height:200px;
+    width:280px;
+   }
+    .team2 img{
+    position: relative;
+    left: 850px;
+    top: -183px;
+    height:200px;
+    width:280px;
+   }
+   .team1{
+   position: relative;
+    left: 40px;
+    top: 200px;
+    height:200px;
+    width:200px;
+   }
+  
+  .module button{
+    position: relative;
+    left: 19px;
+    top:-160px;
+   }
+
+   .module2 button{
+    position: relative;
+    left: 716px;
+    top:-416px;
+   }
+   .module2{
+    position: relative;
+    left: 200px;
+    top:250px;
+   }
+   .module{
+    position: relative;
+    left: 200px;
+    top:220px;
+   }
+   .bullet{
+    animation: fire .5s infinite;
+    position:relative;
+    left: 350px;
+    top:-257px;
+   }
+   .blood{
+    position: relative;
+    left:940px;
+    top: -590px;
+   }
+   .stupid{
+    position:relative;
+    left:462px;
+   }
+   
+</style>
+<body>
+  <div class="top"><img src="http://i.imgur.com/0xbbQVP.png" height="300px" width="300px"></div>
+  <div class="track"></div>
+  <div class="commando"></div>
+  <div class="bullet"></div>
+	<div class="Indian">
+	     <div class="team1"><img src="http://i.imgur.com/KDUM4F7.gif"><div class="commando"></div></div>
+	     <div class="module"><button>CHOOSE TEAM INDIA</button> </div>
+    </div>
+    <div class="terrorist"></div>
+    <div class="blood"></div>
+    <div class="pakistan">
+       <div class="team2"><img src="http://i.imgur.com/z6iUp4B.gif"><div class="terrorists"></div></div>
+       <div class="module2"><button>CHOOSE TEAM PAKISTAN</button> </div>
+     </div>
+     <div class="stupid"> </div>
+
+
+ 
+ <script>
+ $('.module').click(function(){
+ $('.team1').toggle();
+ $('.team2').toggle();
+ $('.module').toggle();
+ $('.module2').toggle();
+  $('.commando').html('<img src="http://i.imgur.com/1EpTJhk.png" height="300px" width="300px">');
+  $('.terrorist').html('<img src="http://i.imgur.com/MVhVYkk.png" height="300px" width="300px">');
+  $('.bullet').html('<img src="http://i.imgur.com/PTNu7Cf.png" height="20px" width="35px">');
+  $('.blood').html('<img src="http://i.imgur.com/GGWRgPe.png" height="30px" width="40px">');
+ });
+
+
+  $('.module2').click(function(){
+     $('.team1').toggle();
+     $('.team2').toggle();
+     $('.module').toggle();
+     $('.module2').toggle();
+     $('.stupid').html('<img src="http://i.imgur.com/zkVG8m2.jpg" height="300px" width="400px">');
+    });
+ </script>
+</body>
+</html>
